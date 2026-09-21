@@ -1,0 +1,21 @@
+{
+    "name": "Game2048.Core.EditModeTests",
+    "rootNamespace": "Game2048.Tests.EditMode",
+    "references": [
+        "Game2048.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false,
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

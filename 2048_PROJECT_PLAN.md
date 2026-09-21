@@ -160,21 +160,22 @@ Bir sprint ancak şu şartlarda tamamlanmış sayılır:
 
 | Phase | Sprint | Durum | Açıklama |
 |---|---|---|---|
-| 0 | 0.1 | [ ] | Proje hazırlığı |
-| 1 | 1.1 | [ ] | Canvas ve 4x4 statik tahta |
-| 1 | 1.2 | [ ] | Tile görünüm sistemi |
-| 2 | 2.1 | [ ] | Board veri modeli ve rastgele kutu |
-| 2 | 2.2 | [ ] | Sola hareket ve birleşme |
-| 2 | 2.3 | [ ] | Dört yönlü hareket |
-| 3 | 3.1 | [ ] | Geçerli hamle ve yeni kutu üretimi |
-| 3 | 3.2 | [ ] | Skor sistemi |
-| 3 | 3.3 | [ ] | Kazanma, Game Over ve Restart |
-| 4 | 4.1 | [ ] | Klavye kontrolü |
-| 4 | 4.2 | [ ] | Mobil swipe kontrolü |
-| 5 | 5.1 | [ ] | Responsive UI ve son görsel tasarım |
-| 5 | 5.2 | [ ] | Basit animasyonlar |
-| 6 | 6.1 | [ ] | High score kaydı |
-| 6 | 6.2 | [ ] | Test, optimizasyon ve Android build |
+| 0 | 0.1 | [x] | Proje hazırlığı Unity Editor'da doğrulandı |
+| 1 | 1.1 | [x] | Statik Canvas ve 4x4 tahta Unity Editor'da doğrulandı |
+| 1 | 1.2 | [x] | Tile görünüm sistemi Unity Editor'da doğrulandı |
+| 2 | 2.1 | [x] | Board veri modeli ve rastgele kutu Unity Test Runner'da doğrulandı |
+| 2 | 2.2 | [x] | Sola hareket ve birleşme Unity Test Runner'da doğrulandı |
+| 2 | 2.3 | [x] | Dört yönlü hareket Unity Test Runner'da doğrulandı |
+| 3 | 3.1 | [x] | BoardModel ve TileView bağlantısı Unity Editor'da doğrulandı |
+| 3 | 3.2 | [x] | Skor sistemi Unity Editor'da doğrulandı |
+| 3 | 3.3 | [x] | Kazanma, Game Over ve Restart Unity Editor'da doğrulandı |
+| 4 | 4.1 | [-] | Klavye kontrolü uygulanıyor; Unity Editor doğrulaması bekleniyor |
+| 4 | 4.2 | [x] | Mobil swipe kontrolü Unity Editor'da doğrulandı |
+| 5 | 5.1 | [x] | Responsive UI ve görsel tasarım Unity Editor'da doğrulandı |
+| 5 | 5.2 | [x] | Hareket, birleşme ve spawn animasyonları Unity Editor'da doğrulandı |
+| 6 | 6.1 | [x] | High score kaydı Unity Editor'da doğrulandı |
+| Ara | Audio Polish | [x] | Ses geri bildirimleri Unity Editor'da doğrulandı |
+| 6 | 6.2 | [-] | Final denetim ve build doğrulaması devam ediyor |
 
 ---
 
@@ -239,11 +240,11 @@ Portrait ekranda responsive çalışan statik 4x4 oyun ekranını hazırlamak.
 
 ### Kabul kriterleri
 
-- Game ekranında 16 eşit hücre görünmelidir.
-- Hücreler 4 satır ve 4 sütun hâlinde olmalıdır.
-- UI elemanları üst üste binmemelidir.
-- New Game butonu tıklanabilir olmalıdır.
-- Ekran oranı değiştiğinde temel düzen bozulmamalıdır.
+- [x] Game ekranında 16 eşit hücre görünmelidir.
+- [x] Hücreler 4 satır ve 4 sütun hâlinde olmalıdır.
+- [x] UI elemanları üst üste binmemelidir.
+- [x] New Game butonu tıklanabilir olmalıdır.
+- [x] Ekran oranı değiştiğinde temel düzen bozulmamalıdır.
 
 ### Önerilen commit
 
@@ -277,10 +278,10 @@ Tek bir hücrenin değerini, rengini ve metnini yönetebilen tekrar kullanılabi
 
 ### Kabul kriterleri
 
-- `TileView`, verilen değeri doğru göstermelidir.
-- `0`, boş hücre görünümü vermelidir.
-- `2`, `4`, `8`, `16` gibi değerler farklı renklere sahip olmalıdır.
-- Inspector referansları eksikse anlaşılır hata verilmelidir.
+- [x] `TileView`, verilen değeri doğru göstermelidir.
+- [x] `0`, boş hücre görünümü vermelidir.
+- [x] `2`, `4`, `8`, `16` gibi değerler farklı renklere sahip olmalıdır.
+- [x] Inspector referansları eksikse anlaşılır hata verilmelidir.
 
 ### Önerilen commit
 
@@ -320,10 +321,10 @@ Unity UI'dan bağımsız çalışan 4x4 tahta modelini oluşturmak.
 
 ### Kabul kriterleri
 
-- Yeni tahta tamamen boş başlayabilmelidir.
-- Yeni oyun başlatıldığında iki farklı hücre dolmalıdır.
-- Dolu hücre üzerine yeni sayı yazılmamalıdır.
-- Tam dolu tahtada yeni sayı üretme denemesi güvenli biçimde başarısız olmalıdır.
+- [x] Yeni tahta tamamen boş başlayabilmelidir.
+- [x] Yeni oyun başlatıldığında iki farklı hücre dolmalıdır.
+- [x] Dolu hücre üzerine yeni sayı yazılmamalıdır.
+- [x] Tam dolu tahtada yeni sayı üretme denemesi güvenli biçimde başarısız olmalıdır.
 
 ### Önerilen commit
 
@@ -367,9 +368,9 @@ ekleme. BoardModel mantığını mümkün olduğunca Unity görünümünden bağ
 
 ### Kabul kriterleri
 
-- Zorunlu test örneklerinin tamamı geçmelidir.
-- Bir hücre aynı hamlede ikinci defa birleşmemelidir.
-- Değişiklik yoksa hareket sonucu geçersiz olarak bildirilmelidir.
+- [x] Zorunlu test örneklerinin tamamı geçmelidir.
+- [x] Bir hücre aynı hamlede ikinci defa birleşmemelidir.
+- [x] Değişiklik yoksa hareket sonucu geçersiz olarak bildirilmelidir.
 
 ### Önerilen commit
 
@@ -401,10 +402,10 @@ Sol hareket kuralını bozmadan dört yönün tamamını desteklemek.
 
 ### Kabul kriterleri
 
-- Dört yön doğru çalışmalıdır.
-- Sağ ve dikey hareketlerde sıra bozulmamalıdır.
-- Geçersiz hareket tahtayı ve skoru değiştirmemelidir.
-- Testler birbirinden bağımsız çalışmalıdır.
+- [x] Dört yön doğru çalışmalıdır.
+- [x] Sağ ve dikey hareketlerde sıra bozulmamalıdır.
+- [x] Geçersiz hareket tahtayı ve skoru değiştirmemelidir.
+- [x] Testler birbirinden bağımsız çalışmalıdır.
 
 ### Önerilen commit
 
@@ -442,10 +443,10 @@ Tahta modeli ile görünümü bağlamak ve yalnızca geçerli hareketten sonra y
 
 ### Kabul kriterleri
 
-- Yeni oyunda iki kutu görünmelidir.
-- Geçerli hamleden sonra yalnızca bir yeni kutu oluşmalıdır.
-- Geçersiz hamlede yeni kutu oluşmamalıdır.
-- UI her hamleden sonra modelle aynı değerleri göstermelidir.
+- [x] Yeni oyunda iki kutu görünmelidir.
+- [x] Geçerli hamleden sonra yalnızca bir yeni kutu oluşmalıdır.
+- [x] Geçersiz hamlede yeni kutu oluşmamalıdır.
+- [x] UI her hamleden sonra modelle aynı değerleri göstermelidir.
 
 ### Önerilen commit
 
@@ -484,9 +485,9 @@ Birleşmelerden oluşan skorun doğru hesaplanması ve UI'da gösterilmesi.
 
 ### Kabul kriterleri
 
-- Aynı hamlede birden fazla birleşme varsa toplam skor doğru olmalıdır.
-- Geçersiz hamle skoru değiştirmemelidir.
-- New Game skoru sıfırlamalıdır.
+- [x] Aynı hamlede birden fazla birleşme varsa toplam skor doğru olmalıdır.
+- [x] Geçersiz hamle skoru değiştirmemelidir.
+- [x] New Game skoru sıfırlamalıdır.
 
 ### Önerilen commit
 
@@ -519,10 +520,10 @@ Oyunun temel durum geçişlerini tamamlamak.
 
 ### Kabul kriterleri
 
-- `2048` oluştuğunda kazanma durumu tetiklenmelidir.
-- Tahta dolu olsa bile birleşme varsa oyun devam etmelidir.
-- Tahta dolu ve birleşme yoksa Game Over olmalıdır.
-- Restart yeni, temiz bir oyun başlatmalıdır.
+- [x] `2048` oluştuğunda kazanma durumu tetiklenmelidir.
+- [x] Tahta dolu olsa bile birleşme varsa oyun devam etmelidir.
+- [x] Tahta dolu ve birleşme yoksa Game Over olmalıdır.
+- [x] Restart yeni, temiz bir oyun başlatmalıdır.
 
 ### Önerilen commit
 
@@ -595,10 +596,10 @@ Android cihazlarda dört yönlü güvenilir swipe kontrolü sağlamak.
 
 ### Kabul kriterleri
 
-- Dört yöne swipe doğru çalışmalıdır.
-- Tek swipe yalnızca bir hamle üretmelidir.
-- Tap hareketi hamle oluşturmamalıdır.
-- New Game ve diğer UI butonları normal çalışmalıdır.
+- [x] Dört yöne swipe doğru çalışmalıdır.
+- [x] Tek swipe yalnızca bir hamle üretmelidir.
+- [x] Tap hareketi hamle oluşturmamalıdır.
+- [x] New Game ve diğer UI butonları normal çalışmalıdır.
 
 ### Önerilen commit
 
@@ -634,9 +635,9 @@ Oyunu farklı telefon ekranlarında okunabilir ve tutarlı göstermek.
 
 ### Kabul kriterleri
 
-- 16 hücre farklı ekranlarda kare görünmelidir.
-- Büyük sayılar hücre dışına taşmamalıdır.
-- Notch ve sistem çubukları önemli UI alanlarını kapatmamalıdır.
+- [x] 16 hücre farklı ekranlarda kare görünmelidir.
+- [x] Büyük sayılar hücre dışına taşmamalıdır.
+- [x] Notch ve sistem çubukları önemli UI alanlarını kapatmamalıdır.
 
 ### Önerilen commit
 
@@ -667,9 +668,9 @@ Oyun geri bildirimini küçük ve güvenli animasyonlarla iyileştirmek.
 
 ### Kabul kriterleri
 
-- Animasyonlar sayı ve konum tutarlılığını bozmamalıdır.
-- Hızlı input, çift hamle veya görsel bozulma üretmemelidir.
-- Animasyon kapatılsa oyun mantığı çalışmaya devam etmelidir.
+- [x] Animasyonlar sayı ve konum tutarlılığını bozmamalıdır.
+- [x] Hızlı input, çift hamle veya görsel bozulma üretmemelidir.
+- [x] Animasyon kapatılsa oyun mantığı çalışmaya devam etmelidir.
 
 ### Önerilen commit
 
@@ -705,9 +706,9 @@ En yüksek skorun uygulama kapatılıp açıldığında korunması.
 
 ### Kabul kriterleri
 
-- High score doğru güncellenmelidir.
-- Oyun yeniden başlatıldığında korunmalıdır.
-- Uygulama kapatılıp açıldığında yüklenmelidir.
+- [x] High score doğru güncellenmelidir.
+- [x] Oyun yeniden başlatıldığında korunmalıdır.
+- [x] Uygulama kapatılıp açıldığında yüklenmelidir.
 
 ### Önerilen commit
 
@@ -722,6 +723,37 @@ feat: persist high score with PlayerPrefs
 Yalnızca Sprint 6.1'i uygula. PlayerPrefs ile high score kaydı ve UI
 entegrasyonu ekle. Aktif oyun tahtasını kaydetme.
 ```
+
+## Ara Görev - Audio Polish
+
+### Durum
+
+[x]
+
+### Hedef
+
+Mevcut oyun akışına, animasyonlara ve kurallara dokunmadan temel ses geri
+bildirimlerini eklemek.
+
+### Görevler
+
+- Hareket, birleşme, yeni tile, buton, kazanma ve Game Over seslerini yönet.
+- Sesleri tek bir `AudioSource` üzerinden `PlayOneShot` ile oynat.
+- Ses kliplerini ve ses seviyelerini Inspector'dan ayarlanabilir tut.
+- Geçersiz hamlede hareket sesi oynatma.
+- Kazanma ve Game Over durumlarında spawn sesini bastır.
+- Oyun bittikten sonra sonuç seslerinin tekrarlanmasını engelle.
+- Mevcut New Game, animasyon, skor ve input davranışlarını koru.
+
+### Kabul kriterleri
+
+- [x] Geçerli birleşmesiz hamlede hareket sesi, birleşmede birleşme sesi çalmalıdır.
+- [x] Yeni tile oluştuğunda spawn sesi çalmalıdır.
+- [x] Kazanma ve Game Over sesleri doğru anda bir kez çalmalıdır.
+- [x] Geçersiz hamlede hareket sesi çalmamalıdır.
+- [x] Üç New Game/Restart butonunda buton sesi çalışmalıdır.
+- [x] Eksik AudioClip referansı oyunu durdurmamalı ve yalnızca bir kez uyarı vermelidir.
+- [x] Sesler animasyonlar açıkken ve kapalıyken doğru çalışmalıdır.
 
 ## Sprint 6.2 - Test, Temizlik ve Android Build
 

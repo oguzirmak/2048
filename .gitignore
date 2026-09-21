@@ -13,6 +13,10 @@
 # Recommended: add any editor/OS/tool-specific ignore rules from the Global/ templates as needed.
 # See: https://github.com/github/gitignore/tree/main/Global
 #
+
+*.md
+!/README.md
+!/2048_PROJECT_PLAN.md
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
